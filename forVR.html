@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+</head>
+<body>
+
+    <a-scene>
+
+      <a-entity light="type: directional; color: #EEE;  intensity: 0.5" position="-1 1 0"></a-entity>
+      <a-entity light="type: directional; color: #EEE;  intensity: 0.5" position="-3 1 0"></a-entity>
+      <a-entity light="type: directional; color: #EEE;  intensity: 0.5" position="4 1 0"></a-entity>
+      <a-entity light="type: directional; color: #EEE;  intensity: 0.5" position="-60 100 0"></a-entity>
+      <a-entity light="type: directional; color: #EEE;  intensity: 0.5" position="0 100 0"></a-entity>
+      <a-entity light="type: hemisphere; color: black; groundColor: black; intensity: 0.5"></a-entity>
+      <a-light type="ambient" color="#fff"></a-light>
+
+      <a-entity id="handleft" oculus-touch-controls="hand:left; model:false">
+        <a-entity gltf-model="./mitutada-one.glb" scale="0.03 0.03 0.03" rotation="0 0 0" position="0 -0.07 0"></a-entity>
+      </a-entity>
+      <a-entity id="handright" oculus-touch-controls="hand:right; model:false">
+        <a-entity gltf-model="./webvrkatana4-one.glb" scale="0.01 0.01 0.01" rotation="0 0 -90" position="0.5 0.3 -0.5"></a-entity>
+      </a-entity>
+      
+      <a-plane rotation="-90 0 0" width="50" height="50" color="#222"></a-plane>
+      
+      <a-camera position="0 1.7 0" x-position="-40 100 150" x-rotation="90 90"></a-camera>
+      
+      <!--
+      <a-entity gltf-model="https://raw.githubusercontent.com/nyaaOM/webvr-assets/main/mat.gltf" scale="2 2 2" position="0 -150 0" ></a-entity>
+      -->
+      <a-sky radius="800" theta-length="200" material="shader:gradientshader;topColor:#0052D4;bottomColor:#9CECFB" geometry="" visible="" id="sky" position=""></a-sky>
+
+    </a-scene>
+
+</body>
+</html>
